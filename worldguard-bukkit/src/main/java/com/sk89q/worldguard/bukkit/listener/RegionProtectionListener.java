@@ -232,7 +232,7 @@ public class RegionProtectionListener extends AbstractListener {
                 String what;
 
                 /* TNT */
-                if (event.getCause().find(EntityType.PRIMED_TNT, EntityType.MINECART_TNT) != null) {
+                if (event.getCause().find(EntityType.TNT, EntityType.TNT_MINECART) != null) {
                     //canBreak = query.testBuild(BukkitAdapter.adapt(target), associable, combine(event, Flags.BLOCK_BREAK, Flags.TNT));
                     canBreak = testBuildType(query, target, associable, Flags.BREAK_BLOCKS, type, null, combine(event, Flags.BLOCK_BREAK, Flags.TNT));
                     what = "use dynamite";
